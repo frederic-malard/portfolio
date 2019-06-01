@@ -95,36 +95,52 @@
         expérience
     </h2>
     <div class="row">
-        <div class="card bg-light mb-3 col-md" style="max-width: 20rem;">
-            <div class="card-header">
-                réservation en ligne - musée du louvre
-            </div>
-            <img src="/images/louvre.jpg" alt="louvre" style="width:100%;">
-            <div class="card-body">
-                <h4 class="card-title">
-                    réservation louvre
-                </h4>
-                <div class="card-text">
-                    <p>
-                        Site créé dans le cadre des projets d'openclassrooms.
-                    </p>
-                    <ul>
-                        <li>framework : Symfony</li>
-                        <li>langage client : JavaScript (jQuery principalement)</li>
-                        <li>plateforme de paiement : Stripe</li>
-                        <li>tests unitaires :  PHPunit</li>
-                    </ul>
+        {% for experience in experiences %}
+            <div class="card bg-light mb-3 col-md" style="max-width: 20rem;">
+                <div class="card-header">
+                    <h4 class="card-title">
+                        {{ experience.title }}
+                    </h4>
                 </div>
-                <div class="row">
-                    <a href="#" class="btn btn-primary col mr-2">
-                        accéder au site
-                    </a>
-                    <a href="#" class="btn btn-primary col ml-2">
-                        plus d'infos
-                    </a>
+                <img src="{{ experience.image }}" alt="{{ experience.title }}" style="width:100%;">
+                <div class="card-body">
+                    <div class="card-text">
+                        <p class="text-center h5">
+                            <span class="badge badge-primary">
+                                {{ experience.stringStart }}
+                                {% if experience.start == experience.end %}
+
+                                {% elseif experience.end is not null %}
+                                    - {{ experience.stringEnd }}
+                                {% else %}
+                                    - en cours
+                                {% endif %}
+                            </span>
+                        </p>
+                        <p>
+                            {{ experience.description }}
+                        </p>
+                        <ul>
+                            {% for point in experience.points %}
+                                <li>{{ point }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="row">
+                        {% if not experience.websiteLink == "#" %}    
+                            <a href="{{ experience.websiteLink }}" class="btn btn-primary col mr-2">
+                                accéder au site
+                            </a>
+                        {% endif %}
+                        {% if not experience.informationsLink == "#" %}    
+                            <a href="{{ experience.informationsLink }}" class="btn btn-primary col mr-2">
+                                plus d'infos
+                            </a>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
-        </div>
+        {% endfor %}
     </div>
 
     {#

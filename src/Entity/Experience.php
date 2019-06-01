@@ -6,6 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ExperienceRepository")
+ * @ORM\HasLifecycleCallbacks
  */
 class Experience
 {
@@ -40,6 +41,51 @@ class Experience
      * @ORM\Column(type="string", length=255)
      */
     private $informationsLink;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $image;
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $start;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $end;
+
+    /**
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+     */
+    public function prepare()
+    {
+        if (empty($this->image))
+        {
+            $this->image = '/images/' . $this->title . '.jpg';
+        }
+        if (empty($this->websiteLink))
+        {
+            $this->websiteLink = '#';
+        }
+        if (empty($this->informationsLink))
+        {
+            $this->informationsLink = '#';
+        }
+    }
+
+    public function stringStart()
+    {
+        return $this->start->format('Y');
+    }
+
+    public function stringEnd()
+    {
+        return $this->end->format('Y');
+    }
 
     public function getId(): ?int
     {
@@ -102,6 +148,42 @@ class Experience
     public function setInformationsLink(string $informationsLink): self
     {
         $this->informationsLink = $informationsLink;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(string $image): self
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    public function getStart(): ?\DateTimeInterface
+    {
+        return $this->start;
+    }
+
+    public function setStart(\DateTimeInterface $start): self
+    {
+        $this->start = $start;
+
+        return $this;
+    }
+
+    public function getEnd(): ?\DateTimeInterface
+    {
+        return $this->end;
+    }
+
+    public function setEnd(?\DateTimeInterface $end): self
+    {
+        $this->end = $end;
 
         return $this;
     }
