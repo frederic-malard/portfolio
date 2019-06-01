@@ -1,0 +1,64 @@
+/*.parDefaut
+{
+    font-family : "Times New Roman";
+}*/
+strong
+{
+    color : #a00;
+    font-style : italic;
+    font-weight: normal;
+}
+h1, h2, h3, h4, h5, h6
+{
+    text-align: center;
+    font-variant: small-caps;
+    /*text-transform : uppercase;*/
+}
+.fondImage
+{
+    width : 100%;
+    height : 250px;
+    padding : 0px;
+    margin : 0px;
+}
+.fondAssombri
+{
+    width : 100%;
+    height : 100%;
+    color : #ffa;
+    text-align: center;
+    text-shadow: black 3px 3px 3px;
+    background : rgba(0, 0, 45, 0.1);
+    transition: background 0.5s;
+}
+.fondAssombri:hover
+{
+    background : rgba(0, 0, 40, 0.7);
+    transition: background 0.5s;
+}
+.strongClair
+{
+    color : white;
+    text-transform : uppercase;
+}
+.fondPhysique
+{
+    background : url("/images/physique.jpg") center;
+}
+.fondMathsInfo
+{
+    background : url("/images/mathsinfo.jpg") center;
+}
+.fondInfo
+{
+    background : url("/images/info.jpg") center;
+}
+.fondEsma
+{
+    background : url("/images/esma.jpg") center;
+}
+.fondWeb
+{
+    background : url("/images/web.jpg") center;
+    font-size : 1.7em;
+}

@@ -1,0 +1,138 @@
+{% extends "base.html.twig" %}
+
+{% block title %}accueil{% endblock %}
+
+{% block body %}
+
+    {# faire site entier (une seule page) sous la forme d'un "CV" interactif #}
+
+    {# présentation générale #}
+    <div class="d-flex align-items-center justify-content-around w-100">
+        <h1 class="display-4">
+            portfolio de <br>
+            <strong>
+                Frédéric Malard
+            </strong>
+        </h1>
+        <img class="d-block" src="/images/photoFredericMalard.jpg" alt="photo personnelle" width="150px">
+    </div>
+    <hr class="my-5">
+    <p class="lead">
+        Bienvenue sur mon portfolio. Je m'appelle Frédéric Malard, j'ai {{ myAge }} ans, et suis étudiant en informatique. Je cherche actuellement un stage dans le web, sur symfony de préférence.
+    </p>
+    <p class="lead">
+        Vous pouvez me retrouver sur <a href="#">linkedin</a>.
+    </p>
+    <hr class="my-5">
+    <h2 class="display-5 text-info my-4">
+        formation
+    </h2>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="fondImage fondPhysique">
+                <div class="fondAssombri d-flex align-items-center justify-content-center">
+                    <p>
+                        2009 <br>
+                        licence <span class="strongClair">physique</span><br>
+                        (première année) <br>
+                        <a href="https://sciences.edu.umontpellier.fr/">faculté des sciences</a> <br>
+                        de montpellier
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="fondImage fondMathsInfo">
+                <div class="fondAssombri d-flex align-items-center justify-content-center">
+                    <p>
+                        2010 <br>
+                        licence <span class="strongClair">maths-info</span><br>
+                        (première année) <br>
+                        <a href="https://sciences.edu.umontpellier.fr/">faculté des sciences</a> <br>
+                        de montpellier
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="fondImage fondInfo">
+                <div class="fondAssombri d-flex align-items-center justify-content-center">
+                    <p>
+                        2011-2014 <br>
+                        licence <span class="strongClair">informatique</span><br>
+                        (stoppée en 3ème année) <br>
+                        <a href="https://sciences.edu.umontpellier.fr/">faculté des sciences</a> <br>
+                        de montpellier
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="fondImage fondEsma">
+                <div class="fondAssombri d-flex align-items-center justify-content-center">
+                    <p>
+                        2015-2016 <br>
+                        <span class="strongClair">cinéma d'animation 3D</span><br>
+                        (première année) <br>
+                        <a href="https://www.esma-artistique.com/">ESMA montpellier</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fondImage fondWeb my-4">
+        <div class="fondAssombri d-flex align-items-center justify-content-center">
+            <p>
+                2017 - en cours <br>
+                <span class="strongClair">informatique spécialité web</span><br>
+                chez <a href="http://openclassrooms.com">openclassrooms</a>
+            </p>
+        </div>
+    </div>
+
+    <hr class="my-5">
+    <h2 class="display-5 text-info my-4">
+        expérience
+    </h2>
+    <div class="row">
+        <div class="card bg-light mb-3 col-md" style="max-width: 20rem;">
+            <div class="card-header">
+                réservation en ligne - musée du louvre
+            </div>
+            <img src="/images/louvre.jpg" alt="louvre" style="width:100%;">
+            <div class="card-body">
+                <h4 class="card-title">
+                    réservation louvre
+                </h4>
+                <div class="card-text">
+                    <p>
+                        Site créé dans le cadre des projets d'openclassrooms.
+                    </p>
+                    <ul>
+                        <li>framework : Symfony</li>
+                        <li>langage client : JavaScript (jQuery principalement)</li>
+                        <li>plateforme de paiement : Stripe</li>
+                        <li>tests unitaires :  PHPunit</li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <a href="#" class="btn btn-primary col mr-2">
+                        accéder au site
+                    </a>
+                    <a href="#" class="btn btn-primary col ml-2">
+                        plus d'infos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {#
+        terminer "CV" avec :
+        - formation = études, avec liens et mosaïque ? (une image cliquable pour la fds, une pour OC etc ? ou alors une pour les maths une pour la physique etc ?)
+        - expériences = liens (datés) "ergonomiques" (images, slide ?) vers sites que j'ai faits précédement
+        - langues : images toeic si réussit
+        - passes temps : lien vers autre site (blog.frederic-malard.com ?) avec présentation dessins, compos, écriture etc
+    #}
+
+{% endblock %}
