@@ -98,7 +98,7 @@
     </h2>
     <div class="row">
         {% for experience in experiences %}
-            <div class="card bg-light mb-3 col-md" style="max-width: 20rem;">
+            <div class="card bg-light mb-3 col-md-6 col-lg-4 col-xl-3" style="max-width: 20rem;">
                 <div class="card-header">
                     <h4 class="card-title">
                         {{ experience.title }}
@@ -127,6 +127,11 @@
                                 <li>{{ point }}</li>
                             {% endfor %}
                         </ul>
+                        {% if not experience.github is null %}
+                            <p>
+                                <a href="https://github.com/FredEtRick/{{experience.github}}">lien github</a>
+                            </p>
+                        {% endif %}
                     </div>
                     <div class="row">
                         {% if not experience.websiteLink == "#" %}    
@@ -149,8 +154,8 @@
         terminer "CV" avec :
         - formation = études, avec liens et mosaïque ? (une image cliquable pour la fds, une pour OC etc ? ou alors une pour les maths une pour la physique etc ?)
         - expériences = liens (datés) "ergonomiques" (images, slide ?) vers sites que j'ai faits précédement
+        - certificats
         - langues : images toeic si réussit
-        - passes temps : lien vers autre site (blog.frederic-malard.com ?) avec présentation dessins, compos, écriture etc
     #}
 
 {% endblock %}

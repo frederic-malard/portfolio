@@ -58,6 +58,11 @@ class Experience
     private $end;
 
     /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $github;
+
+    /**
      * @ORM\PrePersist
      * @ORM\PreUpdate
      */
@@ -184,6 +189,18 @@ class Experience
     public function setEnd(?\DateTimeInterface $end): self
     {
         $this->end = $end;
+
+        return $this;
+    }
+
+    public function getGithub(): ?string
+    {
+        return $this->github;
+    }
+
+    public function setGithub(?string $github): self
+    {
+        $this->github = $github;
 
         return $this;
     }
