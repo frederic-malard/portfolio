@@ -94,3 +94,7 @@ caption
 {
     background : white !important;
 }
+div > div > a
+{
+    color : white;
+}

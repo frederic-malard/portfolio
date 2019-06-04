@@ -25,8 +25,43 @@
     <p class="lead">
         Vous pouvez me retrouver sur <a href="#">linkedin</a>.
     </p>
+    <p class="ml-4 text-muted">
+        Aller à :
+    </p>
+    <div class="text-muted row">
+        <div class="col-lg-2 col-md-4 col-12 p-0">
+            <a href="#formation" class="text-center rounded p-2 m-1 bg-primary d-block">
+                formation
+            </a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-12 p-0">
+            <a href="#experience" class="text-center rounded p-2 m-1 bg-primary d-block">
+                expérience
+            </a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-12 p-0">
+            <a href="#certificats" class="text-center rounded p-2 m-1 bg-primary d-block">
+                certificats
+            </a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-12 p-0">
+            <a href="#competences" class="text-center rounded p-2 m-1 bg-primary d-block">
+                compétences
+            </a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-12 p-0">
+            <a href="#qualites" class="text-center rounded p-2 m-1 bg-primary d-block">
+                qualtiés et défauts
+            </a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-12 p-0">
+            <a href="#infos" class="text-center rounded p-2 m-1 bg-primary d-block">
+                infos diverses
+            </a>
+        </div>
+    </div>
     <hr class="my-5">
-    <h2 class="display-5 text-info my-4">
+    <h2 class="display-5 text-info my-4" id="formation">
         formation
     </h2>
     <div class="row">
@@ -92,11 +127,17 @@
         </div>
     </div>
 
+    <p class="text-right">
+        <a href="#haut" class="text-muted">
+            haut de page
+        </a>
+    </p>
+
     <hr class="my-5">
-    <h2 class="display-5 text-info my-4">
+    <h2 class="display-5 text-info my-4" id="experience">
         expérience
     </h2>
-    <div class="row">
+    <div class="row m-auto">
         {% for experience in experiences %}
             <div class="card bg-light mb-3 col-md-6 col-lg-4 col-xl-3" style="max-width: 20rem;">
                 <div class="card-header">
@@ -150,8 +191,14 @@
         {% endfor %}
     </div>
 
+    <p class="text-right">
+        <a href="#haut" class="text-muted">
+            haut de page
+        </a>
+    </p>
+
     <hr class="my-5">
-    <h2 class="display-5 text-info mt-4 mb-5">
+    <h2 class="display-5 text-info mt-4 mb-5" id="certificats">
         certificats
     </h2>
     <p class="alert alert-info mb-5">
@@ -289,9 +336,15 @@
         </tbody>
     </table>
 
+    <p class="text-right">
+        <a href="#haut" class="text-muted">
+            haut de page
+        </a>
+    </p>
+
     <hr class="my-5">
 
-    <h2 class="display-5 text-info my-4">
+    <h2 class="display-5 text-info my-4" id="competences">
         compétences
     </h2>
 
@@ -485,9 +538,15 @@
         note : ces niveaux de compétences ne reflètent pas forcément mon potentiel, mais reflètent purement mes compétences. Par exemple, j'ai une capacité assez importante à comprendre la logique (le domaine mathématique nommé "logique"), l'algorithmique (algos de graphes, tri, structures de données etc), et je me sens relativement à l'aise avec javascript et jquery. Mon niveau de compétence dans ces domaines est relativement bas car je les ai très peu étudiés, mais si je dois travailler dans un de ces domaines, je pense vite m'adapter. Des applications de plus court chemin par exemple ne seraient pas problématiques pour moi.
     </p>
 
+    <p class="text-right">
+        <a href="#haut" class="text-muted">
+            haut de page
+        </a>
+    </p>
+
     <hr class="my-5">
 
-    <h2 class="display-5 text-info my-4">
+    <h2 class="display-5 text-info my-4" id="qualites">
         qualités et défauts
     </h2>
 
@@ -530,9 +589,15 @@
         Dans mes compétences ci dessus, les algorithmes de graphes, la logique etc, ne sont pas très élevées car j'ai étudié ça rapidement il y a quelques années, donc mes savoirs ne sont pas très poussés. Cependant j'ai toujours eu beaucoup de facilité dans ces domaines, je m'y sens très à l'aise, n'hésitez donc pas si vous avez besoin de quelqu'un pour une appli qui doit optimiser des trajectoires, ou n'importe quoi du même genre.
     </p>
 
+    <p class="text-right">
+        <a href="#haut" class="text-muted">
+            haut de page
+        </a>
+    </p>
+
     <hr class="my-5">
 
-    <h2 class="display-5 text-info my-4">
+    <h2 class="display-5 text-info my-4" id="infos">
         infos diverses
     </h2>
 
@@ -550,6 +615,12 @@
             <td>vélo, escalade</td>
         </tr>
     </table>
+
+    <p class="text-right">
+        <a href="#haut" class="text-muted">
+            haut de page
+        </a>
+    </p>
 
     {#
         terminer "CV" avec :
