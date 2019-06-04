@@ -62,3 +62,35 @@ h1, h2, h3, h4, h5, h6
     background : url("/images/web.jpg") center;
     font-size : 1.7em;
 }
+caption
+{
+    caption-side: top;
+    text-align : center;
+    text-transform : uppercase;
+    font-weight : bold;
+}
+.table-striped > tbody > tr:nth-child(2n+1) > td
+{
+    background : #fffccc;
+}
+.table-striped > tbody > tr:nth-child(2n+2) > td
+{
+    background : #eeeaaa;
+}
+/*td, th
+{
+    text-align : center;
+}*/
+.competence-category
+{
+    text-transform: uppercase;
+}
+.collerdessous
+{
+    margin-bottom : -18px !important;
+    padding-bottom : 0px !important;
+}
+.tableau-uni > tr > td
+{
+    background : white !important;
+}
