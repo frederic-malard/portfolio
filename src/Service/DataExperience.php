@@ -94,6 +94,6 @@ class DataExperience
                ->setInformationsLink('#')
                ->setGithub('portfolio');
 
-        return [$plonge, $siteEntreprise, $WP, $gestion, $ecrivain, $louvre, $blogPerso, $portfolio];
+        return [$louvre, $ecrivain, $blogPerso, $plonge, $gestion, $portfolio, $siteEntreprise, $WP];
     }
 }
