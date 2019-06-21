@@ -29,32 +29,32 @@
         Aller à :
     </p>
     <div class="text-muted row">
-        <div class="col-lg-2 col-md-4 col-12 p-0">
+        <div class="col-lg col-md-6 col-12 p-0">
             <a href="#formation" class="text-center rounded p-2 m-1 bg-primary d-block">
                 formation
             </a>
         </div>
-        <div class="col-lg-2 col-md-4 col-12 p-0">
+        <div class="col-lg col-md-6 col-12 p-0">
             <a href="#experience" class="text-center rounded p-2 m-1 bg-primary d-block">
                 expérience
             </a>
         </div>
-        <div class="col-lg-2 col-md-4 col-12 p-0">
+        <div class="col-lg col-md-4 col-12 p-0">
             <a href="#certificats" class="text-center rounded p-2 m-1 bg-primary d-block">
                 certificats
             </a>
         </div>
-        <div class="col-lg-2 col-md-4 col-12 p-0">
+        <div class="col-lg col-md-4 col-12 p-0">
             <a href="#competences" class="text-center rounded p-2 m-1 bg-primary d-block">
                 compétences
             </a>
         </div>
-        <div class="col-lg-2 col-md-4 col-12 p-0">
+        {#<div class="col-lg-2 col-md-4 col-12 p-0">
             <a href="#qualites" class="text-center rounded p-2 m-1 bg-primary d-block">
                 qualtiés et défauts
             </a>
-        </div>
-        <div class="col-lg-2 col-md-4 col-12 p-0">
+        </div>#}
+        <div class="col-lg col-md-4 col-12 p-0">
             <a href="#infos" class="text-center rounded p-2 m-1 bg-primary d-block">
                 infos diverses
             </a>
@@ -175,12 +175,12 @@
                         {% endif %}
                     </div>
                     <div class="row">
-                        {% if not experience.websiteLink == "#" %}    
+                        {% if experience.websiteLink != "#" %}
                             <a href="{{ experience.websiteLink }}" class="btn btn-primary col mr-2">
                                 accéder au site
                             </a>
                         {% endif %}
-                        {% if not experience.informationsLink == "#" %}    
+                        {% if experience.informationsLink != "#" %}    
                             <a href="{{ experience.informationsLink }}" class="btn btn-primary col mr-2">
                                 plus d'infos
                             </a>
@@ -556,7 +556,7 @@
     </div>
 
     <p class="alert alert-info mt-4">
-        note : ces niveaux de compétences ne reflètent pas forcément mon potentiel, mais reflètent purement mes compétences. Par exemple, j'ai une capacité assez importante à comprendre la logique (le domaine mathématique nommé "logique"), l'algorithmique (algos de graphes, tri, structures de données etc), et je me sens relativement à l'aise avec javascript et jquery. Mon niveau de compétence dans ces domaines est relativement bas car je les ai très peu étudiés, mais si je dois travailler dans un de ces domaines, je pense vite m'adapter. Des applications de plus court chemin par exemple ne seraient pas problématiques pour moi.
+        note : ces niveaux de compétences ne reflètent pas forcément mon potentiel, mais reflètent purement mes compétences. Par exemple, j'ai une capacité assez importante à comprendre la logique (le domaine mathématique nommé "logique"), l'algorithmique (algos de graphes, tri, structures de données etc), et je me sens relativement à l'aise avec javascript et jquery. Mon niveau de compétence dans ces domaines est relativement bas car je les ai peu étudiés, mais si je dois travailler dans un de ces domaines, je pense vite m'adapter. Des applications de plus court chemin par exemple ne seraient pas problématiques pour moi.
     </p>
 
     <p class="text-right">

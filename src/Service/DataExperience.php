@@ -63,7 +63,7 @@ class DataExperience
                ->setStart(new \DateTime('2018-01-01'))
                ->setEnd(new \DateTime('2018-01-01'))
                ->setImage('/images/ecrivain.jpg')
-               ->setWebsiteLink('#')
+               ->setWebsiteLink('http://ecrivain.frederic-malard.com')
                ->setInformationsLink('#');
 
         $louvre->setTitle("louvre (symfony, stripe)")
@@ -72,7 +72,7 @@ class DataExperience
                ->setStart(new \DateTime('2019-01-01'))
                ->setEnd(new \DateTime('2019-01-01'))
                ->setImage('/images/louvre.jpg')
-               ->setWebsiteLink('#')
+               ->setWebsiteLink('http://louvre.frederic-malard.com')
                ->setInformationsLink('#');
 
         $blogPerso->setTitle("blog personnel (symfony, bootstrap)")
@@ -81,7 +81,7 @@ class DataExperience
                ->setStart(new \DateTime('2019-01-01'))
                ->setEnd(new \DateTime('2019-01-01'))
                ->setImage('/images/blog.jpg')
-               ->setWebsiteLink('#')
+               ->setWebsiteLink('http://blog.frederic-malard.com')
                ->setInformationsLink('#');
 
         $portfolio->setTitle("portfolio (symfony, bootstrap, jQuery)")
@@ -94,6 +94,6 @@ class DataExperience
                ->setInformationsLink('#')
                ->setGithub('portfolio');
 
-        return [$louvre, $ecrivain, $blogPerso, $plonge, $gestion, $portfolio, $siteEntreprise, $WP];
+        return [$louvre, $blogPerso, $ecrivain, $plonge, $gestion, $portfolio, $siteEntreprise, $WP];
     }
 }
