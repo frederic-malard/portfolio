@@ -59,7 +59,7 @@ class DataExperience
 
         $ecrivain->setTitle("blog pour écrivain (PHP, jQuery)")
                ->setDescription("Blog PHP, sans framework (excepté bootstrap) ni CMS. Création de la partie front office et de la partie back office. Un effort particulier a été mit à la création d'une liseuse entièrement fait maison en jQuery, non demandée par ma formation, qui s'adapte très précisément a la taille de l'écran, et va jusqu'à s'organiser en double page sur très grand écran, pour éviter les lignes trop longues sans laisser trop d'espace inutile. Un soucis particulier a donc été apporté à l'ergonomie, et un travail sur des algorithmes plus complexes qu'à l'accoutumée a été apporté avec grand intérêt.")
-               ->setPoints(["cadre : formation openclassrooms", "niveau : équivalent licence", "langages principaux : PHP, jQuery", "framework CSS : bootstrap", "apport personnel (non demandé) : liseuse fait maison", "pattern : MVC", "POO (programmation orientée objet"])
+               ->setPoints(["cadre : formation openclassrooms", "niveau : équivalent licence", "langages principaux : PHP, jQuery", "framework CSS : bootstrap", "apport personnel (non demandé) : liseuse fait maison", "pattern : MVC", "POO (programmation orientée objet", "interface administrateur"])
                ->setStart(new \DateTime('2018-01-01'))
                ->setEnd(new \DateTime('2018-01-01'))
                ->setImage('/images/ecrivain.jpg')
@@ -77,7 +77,7 @@ class DataExperience
 
         $blogPerso->setTitle("blog personnel (symfony, bootstrap)")
                ->setDescription("blog personnel, pour y présenter mes productions personnelles non professionnelles, mes passes temps : le dessin, l'écriture, et la composition musicale.")
-               ->setPoints(["cadre : temps libre", "framework PHP : symfony", "framework CSS : bootstrap", "langage client : javascript (jQuery)", "pattern : MVC", "POO (programmation orientée objet"])
+               ->setPoints(["cadre : temps libre", "framework PHP : symfony", "framework CSS : bootstrap", "langage client : javascript (jQuery)", "pattern : MVC", "POO (programmation orientée objet", "rôles utilisateurs : User, Admin"])
                ->setStart(new \DateTime('2019-01-01'))
                ->setEnd(new \DateTime('2019-01-01'))
                ->setImage('/images/blog.jpg')
