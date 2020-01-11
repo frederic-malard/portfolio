@@ -1,0 +1,52 @@
+{% extends "base.html.twig" %}
+
+{% block title %}demineur{% endblock %}
+
+{% block body %}
+
+    <h2 class="display-5 text-info my-4" id="demineur">
+        démineur
+    </h2>
+    <form action="">
+        <label for="difficulte">
+            difficulté : 
+        </label>
+        <select name="difficulte" id="difficulte">
+            <option value="facile">
+                facile
+            </option>
+            <option value="moyen">
+                moyen
+            </option>
+            <option value="difficile">
+                difficile
+            </option>
+        </select>
+        <br>
+        <button class="btn btn-primary" id="new">
+            Nouvelle partie
+        </button>
+        <br>
+        {#<label for="taille">
+            taille
+        </label>
+        <select name="taille" id="taille">
+            <option value="dix">
+                10*10
+            </option>
+            <option value="trente">
+                30*30
+            </option>
+            <option value="cent">
+                100*100
+            </option>
+        </select>#}
+    </form>
+    <table id="terrain" oncontextmenu="return false;">
+    </table>
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="/js/demineur.js"></script>
+{% endblock %}

@@ -1,0 +1,250 @@
+{% extends "base.html.twig" %}
+
+{% block title %}snowtricks{% endblock %}
+
+{% block body %}
+
+    <div class="jumbotron">
+        <h1 class="mb-5">
+            SnowTricks
+        </h1>
+        <img src="/images/snowTricks.jpg" alt="snowtricks image" class="d-block w-75 mb-4 mx-auto">
+        <p>
+            Ce site sur les figures de snowboard a été créé dans le cadre de ma formation chez openclassrooms. Il s'agissait de répondre à la demande d'un client souhaitant créer un site communautaire pour présenter les figures de snowboard. Les attentes ont été respectées, et beaucoup d'apports personnels, de nouvelles fonctionnalités que j'ai imaginées, ont été ajouté.
+        </p>
+
+        <h3 class="mt-5 mb-4">
+            informations techniques :
+        </h3>
+
+        <table class="table table-striped">
+            <tr>
+                <td>
+                    langages
+                </td>
+                <td>
+                    HTML5, CSS3, PHP, jQuery
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    frameworks
+                </td>
+                <td>
+                    Symfony 4, Bootstrap 4, twig
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    URL
+                </td>
+                <td>
+                    <a href="https://snowboard.frederic-malard.com">snowboard.frederic-malard.com</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    durée du projet
+                </td>
+                <td>
+                    un mois et demi
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    versionning
+                </td>
+                <td>
+                    Github
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    bonnes pratiques
+                </td>
+                <td>
+                    utilisation de services, respect du pattern MVC, correctement commenté, ...
+                </td>
+            </tr>
+        </table>
+
+        <h3 class="mt-5 mb-4">
+            testez le site
+        </h3>
+
+        <p>
+            Vous pouvez tester le site en tant que visiteur simple, ou en tant qu'utilisateur, pour jouir de toutes les fonctionnalités, sauf celles de modération et d'administration. Pour ce faire, vous pouvez vous inscrire, ou, si vous ne souhaitez pas le faire, utiliser le compte exemple prévu à cet effet :
+        </p>
+        <table class="table table-striped">
+            <tr>
+                <td>
+                    login
+                </td>
+                <td>
+                    exemple
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    mot de passe
+                </td>
+                <td>
+                    mdpExemple
+                </td>
+            </tr>
+        </table>
+        <p>
+            ne donnant accès qu'aux fonctionnalités basiques auxquelles aurait accès toute personne inscrite, ce compte ne constitue aucune faille de sécurité.
+        </p>
+
+        <h3 class="mt-5 mb-4">
+            Types d'utilisateurs
+        </h3>
+
+        <table class="table table-striped">
+            <tr>
+                <td>
+                    visiteur simple
+                </td>
+                <td>
+                    non inscrit, vous n'avez que des droits d'ordre consultatif, hormis la possibilité de signaler des commentaires déplacés.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    utilisateur
+                </td>
+                <td>
+                    inscrit, vous pouvez créer des figures, modifier et commenter vos figures, commenter les figures de tout le monde, les ajouter en favoris, noter leur difficulté, ...
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    modérateur
+                </td>
+                <td>
+                    Possède les droits de l'utilisateur, et peut en plus supprimer un compte, et supprimer ou valider un commentaire signalé.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    administrateur
+                </td>
+                <td>
+                    Possède les droits du modérateur, et peut en plus nommer un modérateur, retirer le statut de modérateur à quelqu'un, ou nommer un administrateur supplémentaire.
+                </td>
+            </tr>
+        </table>
+
+        <h3 class="mt-5 mb-4">
+            Fonctionnalités personnelles
+        </h3>
+
+        <p>
+            Apports personnels au site, non prévus dans le projet à l'origine, fonctionnalités rajoutées.
+        </p>
+
+        <table class="table table-striped">
+            <tr>
+                <td>
+                    recherches avancées
+                </td>
+                <td>
+                    possibilité de recherche textuelle (rechercher une figure par nom), de filtrer les résultats, et de les trier. <br>
+                    Les critères peuvent se combiner. <br>
+                    l'algorithme <strong>quicksort</strong> a été implémenté et réadapté au code pour un tri optimal.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    prérequis et suites possibles
+                </td>
+                <td>
+                    A des fins pédagogiques, une possibilité d'indiquer des figures comme prérequis d'autres figures a été ajoutée. Un utilisateur voulant apprendre la figure "cork 360" saura ainsi qu'il devra d'abord apprendre le frontflip, le backflip et le 360. <br>
+                    Note : l'algorithme a été travaillé soigneusement pour aider à l'organisation : une recherche de "prérequis indirects" (les prérequis des prérequis d'une figure) a été implémentée dans le code, pour détecter l'ajout par l'utilisateur d'une figure en guise de prérequis, qui est déjà présente dans les prérequis d'une autre figure qu'il aura indiqué. <br>
+                    Par exemple, si l'utilisateur indique, pour un saut périlleux, qu'il faut savoir sauter, vriller, et glisser, l'algorithme détectera que la glisse est déjà un prérequis pour le saut et la vrille, qu'il y a donc informations redondantes, et qu'il peut supprimer la glisse des prérequis.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    difficulté
+                </td>
+                <td>
+                    Le créateur d'une figure et les autres utilisateurs ont la possibilité de noter sa difficulté. La note du créateur et la moyenne des notes des autres utilisateurs apparait sous forme de têtes de mort, colorées en fonction de la difficulté. <br>
+                    Un filtre twig et un service ont été créés pour la gestion des difficultés, pour mieux organiser le code, et le rendre réutilisable.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    favoris
+                </td>
+                <td>
+                    Une gestion des figures favorites a été ajoutée.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    signalement
+                </td>
+                <td>
+                    Les commentaires peuvent être signalés puis modérés.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    modération et administration
+                </td>
+                <td>
+                    La création de ces statuts n'était pas demandée, et est un ajout personnel, pour aider à la gestion du site.
+                </td>
+            </tr>
+        </table>
+
+        <h3 class="mt-5 mb-4">
+            Fonctionnalités du modérateur
+        </h3>
+
+        <p>
+            Les seules fonctionnalités que vous ne pourrez pas tester sont les fonctionnalités réservées au modérateur, et celles réservées à l'administrateur. Voici donc un apperçu de celles du modérateur pour commencer.
+        </p>
+        <img src="/captures/modo.png" alt="image" class="d-block w-100 mx-auto" style="max-width: 250px;">
+        <p>
+        <p>
+            Le modérateur peut modifier ou supprimer toutes les figures
+        </p>
+        <img src="/captures/modSupp.png" alt="image" class="d-block w-100 mx-auto">
+        <p>
+        <p>
+            Il peut aussi gérer les commentaires
+        </p>
+        <img src="/captures/commentaires.png" alt="image" class="d-block w-100 mx-auto">
+        <p>
+        <p>
+            Et il peut supprimer les utilisateurs
+        </p>
+        <img src="/captures/modoUtilisateurs.png" alt="image" class="d-block w-100 mx-auto">
+        <p>
+
+        <h3 class="mt-5 mb-4">
+            Fonctionnalités de d'administrateur
+        </h3>
+
+        <p>
+            L'administrateur possède tous les droits du modérateur, avec d'autres droits en plus.
+        </p>
+        <img src="/captures/admin.png" alt="image" class="d-block w-100 mx-auto" style="max-width: 250px;">
+        <p>
+        <p>
+            L'administrateur peut aussi donner à un utilisateur le statut de modérateur.
+        </p>
+        <img src="/captures/adminUtilisateurs.png" alt="image" class="d-block w-100 mx-auto">
+        <p>
+        <p>
+            Il peut aussi faire perdre à un modérateur son statut, voir au contraire le nommer administrateur. Cette opération est dangereuse (l'administrateur est prévenu) car elle donne à cette autre personne les mêmes droits que lui, et ce gain de grade ne peut être défait que par la personne qui l'a reçue elle même. Cela peut cependant s'avérer utile pour apporter une aide à l'administrateur, ou pour passer la main à quelqu'un, en supprimant par la suite son propre compte, sans avoir à passer par le code source. Pour éviter une situation de non retour, l'administrateur ne peut supprimer son compte s'il est le seul administrateur du site.
+        </p>
+        <img src="/captures/adminModos.png" alt="image" class="d-block w-100 mx-auto">
+        <p>
+
+    </div>
+
+{% endblock %}

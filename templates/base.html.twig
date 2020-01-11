@@ -5,7 +5,9 @@
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <title>frederic malard - {% block title %}{% endblock %}</title>
         <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+        <link rel="stylesheet" href="//code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.css">
         <link rel="stylesheet" href="/css/perso.css">
+        <link rel="shortcut icon" href="/favicon/favicon.png">
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
@@ -24,18 +26,21 @@
             <div class="collapse navbar-collapse" id="navbarColor01">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{ path('home') }}">portfolio (symfony)</a>
+                        <a class="nav-link" href="{{ path('home') }}">portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://louvre.frederic-malard.com">louvre (symfony, stripe)</a>
+                        <a class="nav-link" href="https://snowboard.frederic-malard.com">snowtricks</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://blog.frederic-malard.com">blog personnel (symfony)</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://ecrivain.frederic-malard.com">blog écrivain (PHP, SQL, jQuery)</a>
+                        <a class="nav-link" href="https://blog.frederic-malard.com">blog artistique</a>
                     </li>
                     {#<li class="nav-item">
+                        <a class="nav-link" href="{{ path('demineur') }}">démineur (jQuery)</a>
+                    </li>
+                    {#<li class="nav-item">
+                        <a class="nav-link" href="https://ecrivain.frederic-malard.com">blog écrivain (PHP SQL)</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="http://montpellier.frederic-malard.com">montpellier (WP)</a>
                     </li>
                     <li class="nav-item">
@@ -45,11 +50,19 @@
             </div>
         </nav>
 
-        <div class="container jumbotron parDefaut">
+        <div class="container my-5 {#jumbotron parDefaut#}">
             {% block body %}{% endblock %}
         </div>
 
+        <footer class="container">
+            <p class="text-right my-5">
+                email : <a href="mailto:frederic.malard.pro@gmail.com">frederic.malard.pro@gmail.com</a>
+            </p>
+        </footer>
+
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 

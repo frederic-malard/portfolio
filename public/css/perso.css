@@ -2,6 +2,15 @@
 {
     font-family : "Times New Roman";
 }*/
+a
+{
+    color: #55f;
+    /* font-family: "Times New Roman"; */
+}
+a:hover
+{
+    color: #88f;
+}
 strong
 {
     color : #a00;
@@ -97,4 +106,15 @@ caption
 div > div > a
 {
     color : white;
+}
+.recipientBulle
+{
+    width : 90% !important;
+    margin : auto;
+    margin-bottom : 1.5em;
+    margin-top : 1.5em;
+}
+.bulle
+{
+    width : 100% !important;
 }

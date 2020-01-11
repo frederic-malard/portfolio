@@ -1,0 +1,682 @@
+{% extends "base.html.twig" %}
+
+{% block title %}accueil{% endblock %}
+
+{% block body %}
+
+    {# faire site entier (une seule page) sous la forme d'un "CV" interactif #}
+
+    {#<h1 class="alert alert-danger">site en construction</h1>#}
+
+    {# présentation générale #}
+    <div class="d-flex align-items-center justify-content-around w-100">
+        <h1 class="display-4">
+            portfolio de <br>
+            <strong>
+                Frédéric Malard
+            </strong>
+        </h1>
+        <img class="d-block" src="/images/photoFredericMalard.jpg" alt="photo personnelle" width="150px">
+    </div>
+    <hr class="my-5">
+    <p class="lead">
+        Bienvenue sur mon portfolio. Je m'appelle Frédéric Malard, j'ai {{ myAge }} ans, et suis étudiant en informatique. J'étudie le développement web sur openclassrooms au travers de leur formation principalement axée <a href="https://openclassrooms.com/fr/paths/59-developpeur-dapplication-php-symfony">PHP symfony</a>. J'ai auparavant fait une <a href="https://formations.umontpellier.fr/fr/formations/sciences-technologies-sante-STS/licence-XA/licence-informatique-program-fruai0342321nprme136/informatique-subprogram-informatique.html">licence informatique</a> à la <a href="https://sciences.edu.umontpellier.fr/">faculté des sciences de montpellier</a>, que j'ai suivi jusqu'en 3ème année, avant un cours passage à l'ESMA montpellier pour étudier le cinéma d'animation 3D.
+    </p>
+    <p class="lead">
+        Pour plus d'informations, vous pouvez me retrouver sur <a href="https://www.linkedin.com/in/frédéric-malard-64b907189">linkedin</a>.
+    </p>
+    <p>
+        Vous êtes ici sur mon portfolio, dans lequel vous pourrez retrouver quelques projets, pour un apperçu de ce que je sais faire.
+    </p>
+    {#<p class="ml-4 text-muted">
+        Aller à :
+    </p>
+    <div class="text-muted row">
+        <div class="col-lg col-md-4 col-12 p-0">
+            <a href="#formation" class="text-center rounded p-2 m-1 bg-primary d-block">
+                formation
+            </a>
+        </div>
+        <div class="col-lg col-md-4 col-12 p-0">
+            <a href="#experience" class="text-center rounded p-2 m-1 bg-primary d-block">
+                expérience
+            </a>
+        </div>
+        <div class="col-lg col-md-4 col-12 p-0">
+            <a href="#certificats" class="text-center rounded p-2 m-1 bg-primary d-block">
+                certificats
+            </a>
+        </div>
+        <div class="col-lg col-md-4 col-12 p-0">
+            <a href="#competences" class="text-center rounded p-2 m-1 bg-primary d-block">
+                compétences
+            </a>
+        </div>
+        {#<div class="col-lg-2 col-md-4 col-12 p-0">
+            <a href="#qualites" class="text-center rounded p-2 m-1 bg-primary d-block">
+                qualtiés et défauts
+            </a>
+        </div># }
+        <div class="col-lg col-md-4 col-12 p-0">
+            <a href="#infos" class="text-center rounded p-2 m-1 bg-primary d-block">
+                infos diverses
+            </a>
+        </div>
+        <div class="col-lg col-md-4 col-12 p-0">
+            <a href="#contact" class="text-center rounded p-2 m-1 bg-primary d-block">
+                contact
+            </a>
+        </div>
+    </div>
+    <hr class="my-5">
+    <h2 class="display-5 text-info my-4" id="formation">
+        formation
+    </h2>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="fondImage fondPhysique">
+                <div class="fondAssombri d-flex align-items-center justify-content-center">
+                    <p>
+                        2009 <br>
+                        licence <span class="strongClair">physique</span><br>
+                        (première année) <br>
+                        <a href="https://sciences.edu.umontpellier.fr/">faculté des sciences</a> <br>
+                        de montpellier
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="fondImage fondMathsInfo">
+                <div class="fondAssombri d-flex align-items-center justify-content-center">
+                    <p>
+                        2010 <br>
+                        licence <span class="strongClair">maths-info</span><br>
+                        (première année) <br>
+                        <a href="https://sciences.edu.umontpellier.fr/">faculté des sciences</a> <br>
+                        de montpellier
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="fondImage fondInfo">
+                <div class="fondAssombri d-flex align-items-center justify-content-center">
+                    <p>
+                        2011-2014 <br>
+                        licence <span class="strongClair">informatique</span><br>
+                        (stoppée en 3ème année) <br>
+                        <a href="https://sciences.edu.umontpellier.fr/">faculté des sciences</a> <br>
+                        de montpellier
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="fondImage fondEsma">
+                <div class="fondAssombri d-flex align-items-center justify-content-center">
+                    <p>
+                        2015-2016 <br>
+                        <span class="strongClair">cinéma d'animation 3D</span><br>
+                        (première année) <br>
+                        <a href="https://www.esma-artistique.com/">ESMA montpellier</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fondImage fondWeb my-4">
+        <div class="fondAssombri d-flex align-items-center justify-content-center">
+            <p>
+                2017 - en cours <br>
+                <span class="strongClair">informatique spécialité web</span><br>
+                chez <a href="http://openclassrooms.com">openclassrooms</a>
+            </p>
+        </div>
+    </div>
+
+    <p class="text-right">
+        <a href="#haut" class="text-muted">
+            haut de page
+        </a>
+    </p>
+
+    <hr class="my-5">
+    <h2 class="display-5 text-info my-4" id="experience">
+        expérience
+    </h2>
+    <div class="row m-auto">
+        {% for experience in experiences %}
+            <div class="card bg-light mb-3 col-md-6 col-lg-4 col-xl-3" style="max-width: 20rem;">
+                <div class="card-header">
+                    <h4 class="card-title">
+                        {{ experience.title }}
+                    </h4>
+                </div>
+                <img src="{{ experience.image }}" alt="{{ experience.title }}" style="width:100%;">
+                <div class="card-body">
+                    <div class="card-text">
+                        <p class="text-center h5">
+                            <span class="badge badge-primary">
+                                {{ experience.stringStart }}
+                                {% if experience.start == experience.end %}
+
+                                {% elseif experience.end is not null %}
+                                    - {{ experience.stringEnd }}
+                                {% else %}
+                                    - en cours
+                                {% endif %}
+                            </span>
+                        </p>
+                        <p>
+                            {{ experience.description }}
+                        </p>
+                        <ul>
+                            {% for point in experience.points %}
+                                <li>{{ point }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% if not experience.github is null %}
+                            <p>
+                                <a href="https://github.com/FredEtRick/{{experience.github}}">lien github</a>
+                            </p>
+                        {% endif %}
+                    </div>
+                    <div class="row">
+                        {% if experience.websiteLink != "#" %}
+                            <a href="{{ experience.websiteLink }}" class="btn btn-primary col mr-2">
+                                accéder au site
+                            </a>
+                        {% endif %}
+                        {% if experience.informationsLink != "#" %}    
+                            <a href="{{ experience.informationsLink }}" class="btn btn-primary col mr-2">
+                                plus d'infos
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <p class="text-right">
+        <a href="#haut" class="text-muted">
+            haut de page
+        </a>
+    </p>
+
+    <hr class="my-5">
+    <h2 class="display-5 text-info mt-4 mb-5" id="certificats">
+        certificats
+    </h2>
+    <p class="alert alert-info mb-5">
+        note : ceci ne représente pas l'intégralité des cours que j'ai suivi et des compétences que j'ai acquis. J'ai acquis une part de mes compétences à la faculté durant ma licence, et une autre part en faisant des projets tout en suivant des cours, mais sans prendre la peine de valider ces cours. Les certificats suivants indiquent juste une part des compétences acquises.
+    </p>
+    <table class="table table-striped">
+        <thead class="table-primary">
+            <tr>
+                <th scope="row">délivré par</th>
+                <th scope="row">domaine</th>
+                <th scope="row">intitulé</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <a href="http://openclassrooms.com">
+                        openclassrooms
+                    </a>
+                </td>
+                <td>
+                    HTML 5, CSS 3
+                </td>
+                <td>
+                    <a href="/certificats/htmlcss.pdf">
+                        Apprenez à créer votre site web avec HTML5 et CSS3
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://openclassrooms.com">
+                        openclassrooms
+                    </a>
+                </td>
+                <td>
+                    javascript, bases du langage (hors web)
+                </td>
+                <td>
+                    <a href="/certificats/jsbases.pdf">
+                        Apprenez à coder avec JavaScript
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://openclassrooms.com">
+                        openclassrooms
+                    </a>
+                </td>
+                <td>
+                    javascript pour le web
+                </td>
+                <td>
+                    <a href="/certificats/jsweb.pdf">
+                        Créez des pages web interactives avec JavaScript
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://openclassrooms.com">
+                        openclassrooms
+                    </a>
+                </td>
+                <td>
+                    PHP et MySQL
+                </td>
+                <td>
+                    <a href="/certificats/phpmysql.pdf">
+                        Concevez votre site web avec PHP et MySQL
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://openclassrooms.com">
+                        openclassrooms
+                    </a>
+                </td>
+                <td>
+                    wordpress
+                </td>
+                <td>
+                    <a href="/certificats/wordpressavance.pdf">
+                        Créez votre site professionnel avec WordPress
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://openclassrooms.com">
+                        openclassrooms
+                    </a>
+                </td>
+                <td>
+                    gestion de projet
+                </td>
+                <td>
+                    <a href="/certificats/gestion.pdf">
+                        Découvrez les bases de la gestion de projet
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://openclassrooms.com">
+                        openclassrooms
+                    </a>
+                </td>
+                <td>
+                    méthodologie en cascade
+                </td>
+                <td>
+                    <a href="/certificats/methodologiecascade.pdf">
+                        Gérez un projet digital avec une méthodologie en cascade
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://udemy.com">
+                        udemy
+                    </a>
+                </td>
+                <td>
+                    Symfony v4
+                </td>
+                <td>
+                    <a href="/certificats/symfony.pdf">
+                        Symfony v4 : les fondamentaux par la pratique
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://www.etsglobal.org/Fr/Fre">
+                        ETS Global
+                    </a>
+                </td>
+                <td>
+                    TOEIC
+                </td>
+                <td>
+                    <a href="/certificats/toeicSW.jpg">
+                        TOEIC Speaking and Writing
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p class="text-right">
+        <a href="#haut" class="text-muted">
+            haut de page
+        </a>
+    </p>
+
+    <hr class="my-5">
+
+    <h2 class="display-5 text-info my-4" id="competences">
+        compétences
+    </h2>
+
+    <div class="bg-white p-3 rounded">
+        <p class="competence-category mb-0 ml-3">
+            anglais
+        </p>
+        <p class="mt-2 mb-0">
+            compréhension orale
+        </p>
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p class="mt-2 mb-0">
+            compréhension écrite
+        </p>
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 87%" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p class="mt-3">
+            expression orale - 
+            <a href="/certificats/toeicSW.jpg">
+                TOEIC speaking : 140/200, niveau 6
+            </a>
+        </p>
+        {#<div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+        </div># }
+        <p class="mt-2">
+            expression écrite - 
+            <a href="/certificats/toeicSW.jpg">
+                TOEIC speaking : 180/200, niveau 8
+            </a>
+        </p>
+        {#<div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+        </div># }
+    </div>
+
+    <div class="bg-white p-3 rounded mt-4">
+        <p class="competence-category mb-0 ml-3">
+            web
+        </p>
+        <p class="mt-2 mb-0">
+            symfony v4
+        </p>
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 96%" aria-valuenow="96" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p class="mt-2 mb-0">
+            bootstrap v4
+        </p>
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p class="mt-2 mb-0">
+            wordpress
+        </p>
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 83%" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p class="mt-2 mb-0">
+            HTML 5, CSS 3
+        </p>
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 97%" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p class="mt-2 mb-0">
+            PHP
+        </p>
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p class="mt-2 mb-0">
+            SQL
+        </p>
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 96%" aria-valuenow="96" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p class="mt-2 mb-0">
+            JavaScript, jQuery
+        </p>
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 93%" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+
+    <div class="bg-white p-3 rounded mt-4">
+        <p class="competence-category mb-0 ml-3">
+            langages de programmation, hors web
+        </p>
+        <p class="mt-2 mb-0">
+            java
+        </p>
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 77%" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p class="mt-2 mb-0">
+            C
+        </p>
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p class="mt-2 mb-0">
+            C++
+        </p>
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 76%" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p class="mt-2 mb-0">
+            scheme
+        </p>
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 43%" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+
+    <div class="bg-white p-3 rounded mt-4">
+        <p class="competence-category mb-0 ml-3">
+            informatique, autres compétences
+        </p>
+        <p class="mt-2 mb-0">
+            programmation orientée objet (POO)
+        </p>
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 93%" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p class="mt-2 mb-0">
+            pattern MVC
+        </p>
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 98%" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p class="mt-2 mb-0">
+            lignes de commandes UNIX
+        </p>
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 83%" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p class="mt-2 mb-0">
+            git et github
+        </p>
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p class="mt-2 mb-0">
+            algorithmes de tri (quicksort, etc)
+        </p>
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p class="mt-2 mb-0">
+            algorithmes de graphes (plus court chemin, etc)
+        </p>
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 87%" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p class="mt-2 mb-0">
+            structures de données (arbres, listes, tableaux, piles, files)
+        </p>
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+
+    <div class="bg-white p-3 rounded mt-4">
+        <p class="competence-category mb-0 ml-3">
+            mathématiques
+        </p>
+        <p class="mt-2 mb-0">
+            logique
+        </p>
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p class="mt-2 mb-0">
+            algèbre linéaire
+        </p>
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 81%" aria-valuenow="81" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p class="mt-2 mb-0">
+            analyse
+        </p>
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 59%" aria-valuenow="59" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p class="mt-2 mb-0">
+            maths pour l'informatique (opérations ensemblistes, etc)
+        </p>
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 78%" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+
+    <p class="alert alert-info mt-4">
+        note : ces niveaux de compétences ne reflètent pas forcément mon potentiel, mais reflètent purement mes compétences. Par exemple, j'ai une capacité assez importante à comprendre la logique (le domaine mathématique nommé "logique"), l'algorithmique (algos de graphes, tri, structures de données etc), et je me sens relativement à l'aise avec javascript et jquery. Mon niveau de compétence dans ces domaines est relativement bas car je les ai peu étudiés, mais si je dois travailler dans un de ces domaines, je pense vite m'adapter. Des applications de plus court chemin par exemple ne seraient pas problématiques pour moi.
+    </p>
+
+    <p class="text-right">
+        <a href="#haut" class="text-muted">
+            haut de page
+        </a>
+    </p>
+{#
+    <hr class="my-5">
+
+    <h2 class="display-5 text-info my-4" id="qualites">
+        qualités et défauts
+    </h2>
+
+    <p class="mb-0 pb-0 collerdessous">
+        qualités
+    </p>
+    <p class="mt-0 pt-0">
+        <ul class="text-success">
+            <li>compréhension des concepts</li>
+            <li>idées lors des phases de conception de l'application</li>
+            <li>implantation de fonctionnalités relativement complexes (ex : liseuse adaptée à la fenêtre et réactive)</li>
+        </ul>
+    </p>
+    <p class="collerdessous">
+        défauts
+    </p>
+    <p>
+        <ul class="text-danger">
+            <li>difficultés pour trouver une information (dans une doc, sur internet ...)</li>
+            <li>difficultés pour installer ou configurer un environnement de travail</li>
+            <li>difficultés à me sortir des bugs</li>
+        </ul>
+    </p>
+    <p class="text-center mt-4">
+        plus en détails
+    </p>
+    <p>
+        Mes qualités et défauts peuvent parfois être résumés ainsi : <span class="text-success">je suis performant et à l'aise</span> dans ce qui <span class="text-success">cause des difficultés aux autres</span>, et <span class="text-danger">moins performant</span> dans ce qui semble <span class="text-danger">trivial aux autres</span>.
+    </p>
+    <p>
+        Ces caractéristiques peuvent être pénalisantes si elles ne sont pas prises en considération, mais elles peuvent surtout être <span class="text-success">bénéfiques si elles sont utilisées intelligement</span> : si, dans l'équipe, chaque personne répond aux difficultés de l'autres, les choses iront plus vite.
+    </p>
+    <p>
+        J'aurais personnellement parfois besoin d'<span class="text-danger">être aidé pour une installation</span> ou <span class="text-danger">configuration de logiciel</span>, d'environnement, de serveur, pour le déploiement d'un site, ou pour un <span class="text-danger">bug assez trivial</span>. Je pourrais en retour <span class="text-success">aider dans les phases de conception</span>, lorsqu'on imaginera les différentes fonctionnalités, ou dès que les <span class="text-success">algorithmes</span> deviendront un peu <span class="text-success">poussés et complexes</span>, sur le plan conceptuel.
+    </p>
+    <p>
+        Je suis <span class="text-danger">mauvais</span> pour <span class="text-danger">fouiller</span>, pour <span class="text-danger">écrire des tas de lignes de codes sans laisser passer d'erreurs</span>, pour <span class="text-danger">repérer l'erreur par la suite</span>, je <span class="text-danger">manque de rigueur</span> et de <span class="text-danger">mémoire</span>. Mais j'arrive facilement a <span class="text-success">comprendre les concepts</span>, a <span class="text-success">structurer un raisonnement</span>, et je n'ai pas de difficultés à saisir, par exemple, comment <span class="text-success">optimiser les trajets</span> pour une application uber, comment concevoir un ensemble de fonctions qui font des choses complexes, etc.
+    </p>
+    <p>
+        Dans mes compétences ci dessus, les <span class="text-success">algorithmes de graphes</span>, la <span class="text-success">logique</span> etc, ne sont pas très élevées car j'ai <span class="text-danger">étudié ça rapidement il y a quelques années</span>, donc mes savoirs ne sont pas très poussés. Cependant j'ai toujours eu beaucoup de <span class="text-success">facilité dans ces domaines</span>, je m'y sens <span class="text-success">très à l'aise</span>, n'hésitez donc pas si vous avez besoin de quelqu'un pour une appli qui doit optimiser des trajectoires, ou n'importe quoi du même genre.
+    </p>
+
+    <p class="text-right">
+        <a href="#haut" class="text-muted">
+            haut de page
+        </a>
+    </p>
+# }
+    <hr class="my-5">
+
+    <h2 class="display-5 text-info my-4" id="infos">
+        infos diverses
+    </h2>
+
+    <table class="table tableau-uni">
+        <tr>
+            <th>permis</th>
+            <td>permis B (voiture)</td>
+        </tr>
+        <tr>
+            <th>passions</th>
+            <td>cosmologie, physique fondamentale, musique</td>
+        </tr>
+        <tr>
+            <th>sports</th>
+            <td>vélo, escalade</td>
+        </tr>
+        <tr>
+            <th>ville</th>
+            <td>montpellier</td>
+        </tr>
+    </table>
+
+    <p class="text-right">
+        <a href="#haut" class="text-muted">
+            haut de page
+        </a>
+    </p>
+
+    <hr class="my-5">
+
+    <h2 class="display-5 text-info my-4" id="contact">
+        contact
+    </h2>
+
+    <p>adresse mail : <a href="mailto:frederic.malard.pro@gmail.com">frederic.malard.pro@gmail.com</a></p>
+
+    <p class="text-right">
+        <a href="#haut" class="text-muted">
+            haut de page
+        </a>
+    </p>
+
+    {#
+        terminer "CV" avec :
+        - formation = études, avec liens et mosaïque ? (une image cliquable pour la fds, une pour OC etc ? ou alors une pour les maths une pour la physique etc ?)
+        - expériences = liens (datés) "ergonomiques" (images, slide ?) vers sites que j'ai faits précédement
+        - certificats (table si ordi, liste si mobile ? JS ? CSS ?)
+        - compétences (langues : images toeic si réussit, web : symf etc, concepts de programmation : POO MVC etc, langages hors web : java C etc, info autres : algo etc, maths : algLin analyse logique ensembles etc)
+        - qualités et défauts
+        - infos diverses (permis B, intérêts passions et activités (astro, vélo, escalade...))
+    #}
+
+{% endblock %}

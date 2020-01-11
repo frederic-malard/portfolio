@@ -23,4 +23,38 @@ class HomeController extends AbstractController
             'experiences' => $experiences
         ]);
     }
+
+    /**
+     * @Route("/snowtricks", name="snowtricks")
+     */
+    public function snowtricks()
+    {
+        return $this->render("/home/snowtricks.html.twig");
+    }
+
+    /**
+     * @Route("/blog-artistique", name="blog_artistique")
+     */
+    public function blogArtistique()
+    {
+        return $this->render("/home/blogArtistique.html.twig");
+    }
+
+    /**
+     * @Route("/a-propos-de-moi", name="moi")
+     */
+    public function moi()
+    {
+        return $this->render("/home/moi.html.twig");
+    }
+
+    /**
+     * @Route("/demineur", name="demineur")
+     */
+    public function demineur()
+    {
+        return $this->render('jsDemo/demineur.html.twig', [
+
+        ]);
+    }
 }
