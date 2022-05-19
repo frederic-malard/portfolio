@@ -37,3 +37,4 @@ vendor
 **/.DS_Store
 **/_ign_**
 **/~lock**
+**.htaccess
