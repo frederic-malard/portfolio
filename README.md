@@ -14,5 +14,4 @@ le site web est en ligne, à l'adresse https://frederic-malard.com
 ### Installer les fichiers manquants
 2.1. si vous n'avez pas composer, installez le, en suivant les instructions sur getcomposer.org/download\
 2.2. utilisez le en version 1, pour éviter les problèmes de compatiblité : composer self-update --1 (pour revenir à la version à laquelle vous étiez : composer self-update --rollback)\
-2.3. Lancez la commande « composer install » pour installer toutes les dépendances\
-2.4. Configurez un fichier « config/packages/swiftmailer.yaml » avec vos données de mail
+2.3. Lancez la commande « composer install » pour installer toutes les dépendances
